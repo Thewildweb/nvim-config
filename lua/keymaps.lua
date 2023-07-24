@@ -22,6 +22,9 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 -- Toggle filetree
 vim.keymap.set('n', '<leader>tr', '<cmd>NvimTreeToggle<CR>')
 
+-- Black on current file
+vim.keymap.set('n', '<space>f', '<cmd>w | !black % | w<CR><CR>')
+
 -- Resize with arrows
 -- delta: 2 lines
 vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
@@ -36,3 +39,11 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 -- Hint: start visual mode with the same area as the previous area and the same mode
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<space>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+

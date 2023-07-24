@@ -137,7 +137,7 @@ _G.packer_plugins = {
     url = "https://github.com/tanvirtin/monokai.nvim"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-path", "cmp-cmdline", "cmp-buffer", "cmp-nvim-lsp" },
+    after = { "cmp-cmdline", "cmp-nvim-lsp", "cmp-buffer", "cmp-path" },
     config = { "require('config.nvim-cmp')" },
     loaded = true,
     only_config = true,
@@ -154,10 +154,30 @@ _G.packer_plugins = {
     path = "/home/datadepartment/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/datadepartment/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/datadepartment/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/datadepartment/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/datadepartment/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/datadepartment/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
 
@@ -169,8 +189,8 @@ time([[Config for nvim-cmp]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd cmp-cmdline ]]
-vim.cmd [[ packadd cmp-path ]]
 vim.cmd [[ packadd cmp-nvim-lsp ]]
+vim.cmd [[ packadd cmp-path ]]
 vim.cmd [[ packadd cmp-buffer ]]
 time([[Sequenced loading]], false)
 

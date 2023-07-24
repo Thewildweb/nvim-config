@@ -38,6 +38,8 @@ return require('packer').startup(function(use)
     ---------------------------------------
     -- NOTE: PUT YOUR THIRD PLUGIN HERE --
     ---------------------------------------
+    use "nvim-lua/plenary.nvim"
+    use 'nvim-telescope/telescope.nvim'
     use 'tanvirtin/monokai.nvim'
     use { 'williamboman/mason.nvim' }
     use { 'williamboman/mason-lspconfig.nvim'}
@@ -50,7 +52,9 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'nvim-tree/nvim-tree.lua' 
+    use 'nvim-tree/nvim-web-devicons'
     use 'github/copilot.vim'
+    use 'navarasu/onedark.nvim'
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
