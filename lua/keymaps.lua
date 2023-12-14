@@ -19,6 +19,10 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
+-- Next and prev file
+vim.keymap.set('n', '<space>bn', '<cmd>bnext<CR>')
+vim.keymap.set('n', '<space>bp', '<cmd>bprev<CR>')
+
 -- Toggle filetree
 vim.keymap.set('n', '<leader>tr', '<cmd>NvimTreeToggle<CR>')
 
@@ -47,3 +51,17 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+
+-- Stuff for Harpoon
+vim.keymap.set('n', '<space>hd', '<cmd>lua require("harpoon.mark").add_file()<CR>')
+vim.keymap.set('n', '<space>hv', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>')
+vim.keymap.set('n', '<space>h1', '<cmd>lua require("harpoon.ui").nav_file(1)<CR>')
+vim.keymap.set('n', '<space>h2', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>')
+vim.keymap.set('n', '<space>h3', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>')
+vim.keymap.set('n', '<space>h4', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>')
+vim.keymap.set('n', '<space>h5', '<cmd>lua require("harpoon.ui").nav_file(5)<CR>')
+vim.keymap.set('n', '<space>hn', '<cmd>lua require("harpoon.ui").nav_next()<CR>')
+vim.keymap.set('n', '<space>hp', '<cmd>lua require("harpoon.ui").nav_prev()<CR>')
+
+
+vim.g.copilot_assume_mapped = true

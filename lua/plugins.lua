@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'
     use 'github/copilot.vim'
     use 'navarasu/onedark.nvim'
+    use 'ThePrimeagen/harpoon'
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
